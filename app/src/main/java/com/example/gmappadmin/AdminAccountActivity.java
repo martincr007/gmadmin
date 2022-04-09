@@ -35,6 +35,7 @@ public class AdminAccountActivity extends AppCompatActivity {
     private Retrofit retrofit;
     UserService userService;
     private int idCochera = 30;
+    private int id = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
