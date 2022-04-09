@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">GarageMapp Administrador</string>
+    <string name="prompt_user_id">Nombre</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="action_sign_in">Ingresar</string>
+    <string name="action_facturar">Finalizar</string>
+    <string name="action_ver_detalle">Ver detalles</string>
+    <string name="dontHaveAccount">¿No tienes cuenta? Crea una </string>
+    <string name="create_here">AQUI</string>
+    <string name="error_field_required">Debe ingresar un valor</string>
+    <string name="error_invalid_password">La contraseña debe tener al menos 5 caracteres</string>
+    <string name="error_invalid_email">El correo ingresado no es válido</string>
+    <string name="error_distinct_password">La contraseñas no coinciden</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_username">Nombre de usuario</string>
+    <string name="hint_apellido">Apellido</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_password_confirm">Repetir contraseña</string>
+    <string name="texto_boton_registrar">Registrar</string>
+    <string name="prompt_dominio">Dominio / Patente</string>
+    <string name="prompt_tarifa">Tarifa</string>
+    <string name="texto_boton_cambiar_disponible">Marcar como Disponible</string>
+    <string name="texto_boton_cambiar_ocupado">Marcar como Ocupado</string>
+    <string name="error_long_field">Debe ingresar la cantidad requerida</string>
+    <string name="action_guardar_tarifa">Guardar tarifa</string>
+    <string name="action_guardar_tolerancia">Guardar tolerancia</string>
+    <string name="prompt_tolerancia">Tolerancia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_comprar">Comprar</string>
+    <string name="action_guardar_hora">Hora de cierre parcial</string>
+    <string name="prompt_tarifa_auto">Tarifa auto</string>
+    <string name="prompt_tarifa_camioneta">Tarifa camioneta</string>
+    <string name="prompt_tarifa_moto">Tarifa moto</string>
+    <string name="prompt_hora_cierre">Hora cierre parcial</string>
+    <string name="action_guardar_cambios">Guardar cambios</string>
+    <string name="hint_email_send">Dirección de email que recibirá resumen</string>
+</resources>

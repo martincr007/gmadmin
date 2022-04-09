@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame_pendientes"
+    tools:context=".PendientesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_cant_actual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="55dp"
+        android:text="Vehiculos en cochera:"
+        android:textAlignment="textStart"
+        android:textSize="15sp"
+        android:layout_below="@+id/toolbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/tv_cant_actual"/>
+
+    <EditText
+        android:id="@+id/edtFiltroPendientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:inputType="textCapCharacters"
+        android:layout_below="@+id/tv_cant_actual"/>
+
+    <ListView
+        android:id="@+id/lvIngresosBis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/edtFiltroPendientes"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="55dp"/>
+
+</RelativeLayout>

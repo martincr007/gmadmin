@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@xml/background_selector_inverso"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.gmappadmin.GestionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.7">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginBottom="-3dp"
+                    app:backgroundTint="@color/colorRed"
+                    app:fabSize="mini"
+                    app:srcCompat="@drawable/ic_power_off"
+                    app:tint="@color/white" />
+                <!--android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"-->
+
+                <!--<ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/user"
+                    android:contentDescription="Logo de la app"
+                    tools:ignore="HardcodedText" />-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/palmeras"
+                    app:civ_border_width="0dp"
+                    app:civ_border_color="#FF000000"
+                    tools:ignore="MissingConstraints" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.3"
+                android:orientation="vertical"
+                android:weightSum="1.2">
+
+                <!--Boton 1-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goGestionCochera"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgBoton1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/menu_disponibilidad_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgBoton1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+                            <TextView
+                                android:id="@+id/tvGestionCochera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gestion de disponibilidad"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Indica si tiene ligar disponible en su cochera."
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Boton 2-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goIngresos"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgIngresos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/menu_add_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgIngresos"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvGestionEgresos"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ingresos"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Añadir ingresos de vehículos a la cochera."
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <!--Boton 3-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goGestionIngresos"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imgGestionIngresos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/menu_gestion_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgGestionIngresos"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/tvGestionTarifas"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gestion de ingresos"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Añade ingresos y dar salida a vehículos"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Boton 4-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goGestionTotales"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgTotales"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/menu_total_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgTotales"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+                            <TextView
+                                android:id="@+id/tvTarifa"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gestión de totales"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Realiza el cierre diario y muestra totales"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Boton 6-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goGestionTarifas"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgTarifas"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_settings_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgTarifas"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+                            <TextView
+                                android:id="@+id/tvTotales"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Configuración"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Actualiza parámetros de su negocio"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--Boton 6-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="0.2"
+                    android:background="@xml/background_gestion_boton2"
+                    android:onClick="goGenerarQR"
+                    android:orientation="vertical"
+                    android:elevation="5dp"
+                    android:translationZ="10dp"
+                    android:translationY="10dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imgQR"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/ic_qr_code_48"
+                            android:contentDescription="Logo de la app"
+                            tools:ignore="HardcodedText" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@+id/imgQR"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Generar codigo QR"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="16sp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Genera el codigo QR de la cochera"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Asistente de voz">
+        <CheckBoxPreference
+            android:key="sound"
+            android:title="Sonido"
+            android:summary="Activa o desactiva asistente de voz que le indica las cocheras mas cercanas"
+            android:defaultValue="true"/>
+<!--        <EditTextPreference
+            android:key="user"
+            android:title="Nombre de Usuario"
+            android:summary="Identifica al usuario de la aplicación."
+            android:dialogTitle="Introduce valor"
+            android:defaultValue="0"/>
+        <EditTextPreference
+            android:key="idCochera"
+            android:title="Identificador de la cochera"
+            android:summary="Identifica la cochera correspondiente a la usuario."
+            android:dialogTitle="Introduce valor"
+            android:defaultValue="1"/>-->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Metodo de localización">
+        <!--<ListPreference
+            android:key="location_mode"
+            android:title="Localización"
+            android:summary="Metodo de localización usado por la aplicación."
+            android:dialogTitle="Indicar metodo"
+            android:entries="@array/metodo_location"
+            android:entryValues="@array/codigo_location"
+            android:defaultValue="NETWORK"/>-->
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Actualización">
+        <!--<ListPreference
+            android:key="cocheras_update"
+            android:title="Actualización Estado de cocheras"
+            android:summary="Tiempo que transcurre cada actualización del estado de las cocheras."
+            android:dialogTitle="Indicar tiempo"
+            android:entries="@array/tiempo_update"
+            android:entryValues="@array/codigo_tiempo_update"
+            android:defaultValue="60000"/>-->
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@xml/background_selector_inverso"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.example.gmappadmin.IngresosActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Nuevo ingreso"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/float_label_dominio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:theme="@style/LoginTextField">
+                    <EditText
+                        android:id="@+id/edtDominio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_dominio"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="7"
+                        android:maxLines="1"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="@android:color/white"
+                        android:textCursorDrawable="@null"
+                        android:textSize="18sp"
+                        android:nextFocusDown="@id/rbAuto"
+                        android:nextFocusRight="@id/rbAuto"/>
+                    <!--android:inputType="number"-->
+                </com.google.android.material.textfield.TextInputLayout>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/rbAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/white"
+                        android:text="Auto"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:nextFocusDown="@id/btnIngresar"/>
+                    <RadioButton
+                        android:id="@+id/rbCamioneta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/white"
+                        android:text="Camioneta"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:nextFocusDown="@id/btnIngresar"/>
+                    <RadioButton
+                        android:id="@+id/rbMoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:buttonTint="@android:color/white"
+                        android:text="Moto"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:nextFocusDown="@id/btnIngresar"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical">
+                <!--Agrega una linea separadora-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="70dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <NumberPicker
+                        android:id="@+id/npHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:focusable="false"
+                        android:theme="@style/NumberPicker" />
+                    <NumberPicker
+                        android:id="@+id/npDosPuntos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:showDividers="middle"
+                        android:focusable="false"
+                        android:theme="@style/NumberPicker" />
+                    <NumberPicker
+                        android:id="@+id/npMinutos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:focusable="false"
+                        android:theme="@style/NumberPicker" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@android:color/darker_gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btnIngresar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="26dp"
+                    android:text="@string/action_facturar"
+                    android:textStyle="bold"
+                    android:theme="@style/SecondaryButton" />
+                android:theme="@style/SecondaryButton"
+                android:text="Registrar" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<NumberPicker
+        android:id="@+id/numberPicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"/>-->
+</LinearLayout>
